@@ -11,7 +11,7 @@ def lineNotify(str):
     pyautogui.screenshot('screenshot-tmp.png') # 自動截圖
                            
     headers = {
-        "Authorization": "Bearer " + "TOKEN",
+        "Authorization": "Bearer " + "sV6wBygW6IBNSP5ww9riZOS8n7unF6PG9Wr9M9tBVeK",
     }
      
     params = {"message": str + "警告, 請注意",  # 傳訊息，這邊設定傳success
@@ -41,11 +41,13 @@ while True:
     tmp = ""
 
     for image in imageArr:
-        flag = False
         conf = 1
 
         if image == "player2.png":
             conf = 0.965
+
+        if image == "member.png":
+            conf = 0.99
 
         location = pyautogui.locateOnScreen(image, confidence = conf)
 
