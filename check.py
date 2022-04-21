@@ -11,7 +11,7 @@ def lineNotify(str):
     pyautogui.screenshot('screenshot-tmp.png') # 自動截圖
                            
     headers = {
-        "Authorization": "Bearer " + "sV6wBygW6IBNSP5ww9riZOS8n7unF6PG9Wr9M9tBVeK",
+        "Authorization": "Bearer " + "TOKEN",
     }
      
     params = {"message": str + "警告, 請注意",  # 傳訊息，這邊設定傳success
