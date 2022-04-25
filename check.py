@@ -44,7 +44,7 @@ while True:
         conf = 1
 
         if image == "player2.png":
-            conf = 0.965
+            conf = 0.98
 
         if image == "member.png":
             conf = 0.99
