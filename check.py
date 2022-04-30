@@ -5,13 +5,18 @@ from PIL import ImageGrab
 from functools import partial
 import requests
 import os
-ImageGrab.grab = partial(ImageGrab.grab, all_screens=True)
+
+# 螢幕1
+#ImageGrab.grab = partial(ImageGrab.grab, bbox =(0, 0, 1920, 1080), all_screens=True)
+
+# 螢幕2
+ImageGrab.grab = partial(ImageGrab.grab, bbox =(1920, 0, 3840, 1080), all_screens=True)
 
 def lineNotify(str):
     pyautogui.screenshot('screenshot-tmp.png') # 自動截圖
                            
     headers = {
-        "Authorization": "Bearer " + "TOKEN",
+        "Authorization": "Bearer " + "sV6wBygW6IBNSP5ww9riZOS8n7unF6PG9Wr9M9tBVeK",
     }
      
     params = {"message": str + "警告, 請注意",  # 傳訊息，這邊設定傳success
